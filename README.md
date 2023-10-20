@@ -1,4 +1,4 @@
-# PROJECT-1---Neural-virtual-sensor-for-monitoring-the-fermentation-of-mead-with-jabuticaba-extract.
+# Neural-virtual-sensor-for-monitoring-the-fermentation-of-mead-with-jabuticaba-extract.
 
 
   Mead is an alcoholic beverage fermented from water and honey, typically produced through the action of yeasts, usually strains of Saccharomyces cerevisae, 
