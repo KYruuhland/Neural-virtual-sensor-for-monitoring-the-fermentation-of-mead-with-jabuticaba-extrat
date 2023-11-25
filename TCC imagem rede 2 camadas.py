@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 
 # Defina o número de entradas, neurônios intermediários e saídas
-num_inputs = 3
+num_inputs = 4
 num_hidden_neurons = 4
-num_hidden_neurons2 = 4
+num_hidden_neurons2 = 0
 num_outputs = 3
 
 # Defina as posições das camadas
@@ -16,7 +16,7 @@ output_layer_x = 7
 layer_height = 0.8
 
 # Nomes das entradas e saídas
-input_names = ['pH', '°Brix', 'D.O.']
+input_names = ['pH', 'S.S.', 'D.O.', 'T']
 output_names = ['X', 'S', 'P']
 
 # Crie uma figura com alta qualidade
@@ -58,8 +58,8 @@ for i in range(num_hidden_neurons2):
 
 # Desenhe as camadas de saída
 for i, name in enumerate(output_names):
-    ax.add_patch(plt.Circle((output_layer_x, i * layer_height), 0.2, color='black', fill=False))
-    ax.text(output_layer_x + 0.3, i * layer_height, name, fontsize=20, verticalalignment='center')
+    ax.add_patch(plt.Circle((output_layer_x, i * layer_height + 0.4), 0.2, color='black', fill=False))
+    ax.text(output_layer_x + 0.3, i * layer_height + 0.4, name, fontsize=20, verticalalignment='center')
     if i == 2:
         ax.text(output_layer_x - 0.2, i * layer_height - 2.0, 'outputs', fontsize=14, verticalalignment='center', color='gray')
 
@@ -76,7 +76,7 @@ for i in range(num_hidden_neurons): # Conecta as camadas intermediárias
 
 for i in range(num_hidden_neurons2):
     for j in range(num_outputs):
-        ax.annotate("", xy=(hidden_layer_x2 + 0.2, i * layer_height), xytext=(output_layer_x - 0.2, j * layer_height),
+        ax.annotate("", xy=(hidden_layer_x2 + 0.2, i * layer_height), xytext=(output_layer_x - 0.2, j * layer_height + 0.4),
                     arrowprops=dict(arrowstyle="<-", lw=0.5, color='gray'))
 
 # Configura os limites dos eixos e exibe a figura
@@ -85,5 +85,5 @@ ax.set_ylim(-0.5, num_hidden_neurons * layer_height - 0.4)
 ax.set_aspect('equal')
 ax.axis('off')
 plt.tight_layout()
-plt.savefig('IMAGEM TCC 2 CAMADAS.png', dpi=300)
+plt.savefig('IMAGEM TCC 2 2 .png', dpi=300)
 plt.show()
